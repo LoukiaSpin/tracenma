@@ -1,6 +1,6 @@
 Package: tracenma
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Database for Transitivity Methodology in Network Meta-Analysis
 Version: 0.1.0
 Authors@R: c(
     person("Loukia", "Spineli", email = "Spineli.Loukia@mh-hannover.de", 
