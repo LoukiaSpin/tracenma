@@ -1,4 +1,4 @@
-#' Get the index of specific datasets
+#' Get the selected dataset
 #'
 #' @description
 #'   Creates the enhanced balloon plot for the summary effect size and
@@ -66,9 +66,7 @@
 #'              drug_names = interv_names)
 #'
 #' @export
-get.dataset.index <- function (pmid,
-                               year = NULL) {
-
+get.dataset <- function(pmid) {
 
   ## Default arguments
   # 'pmid' argument
@@ -81,25 +79,10 @@ get.dataset.index <- function (pmid,
     pmid
   }
 
-  # 'year' argument
-  year <- if (any(!is.null(year) & length(year) > 1)) {
-    stp("'year' is scalar.", call. = FALSE)
-  } else if (any(!is.null(year) & !is.element(year, index[, 4]))) {
-    stop("This Year does not exist. Check 'index'.", call. = FALSE)
-  } else if (any(!is.null(year) & (length(year) == 1 |
-                                   is.element(year, index[, 4])))) {
-    year
-  } else {
-    NULL
-  }
 
+  ## Get the datase that corresponds to selected 'pmid'
+  get.dataset <-
+    readRDS(system.file(paste0("extdata/", pmid,".rds"), package = 'tracenma'))
 
-  ## If year is provided, all corresponding SRs are shown.
-  index.sr <- if (is.null(year)) {
-    subset(index, is.element(PMID, pmid))
-  } else {
-    subset(index, Year == year)
-  }
-
-  return(index.sr)
+  return(get.dataset)
 }
