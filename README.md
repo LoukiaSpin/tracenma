@@ -10,4 +10,4 @@ Official Git repository of `tracenma` R package
 
 ## Funding source
 
-The development of the `rnmamod` package is funded by the **German Research Foundation** (Deutsche Forschungsgemeinschaft) (grant no. [SP 1664/2-1](https://gepris.dfg.de/gepris/projekt/462260733)) <div style="text-align: right"> <img src="man/figures/dfg_logo_schriftzug_blau_foerderung_en.png" width="280" height="100" align="right"></div>
+The development of the `tracenma` R package is funded by the **German Research Foundation** (Deutsche Forschungsgemeinschaft) (grant no. [SP 1664/2-1](https://gepris.dfg.de/gepris/projekt/462260733)) <div style="text-align: right"> <img src="man/figures/dfg_logo_schriftzug_blau_foerderung_en.png" width="280" height="100" align="right"></div>
