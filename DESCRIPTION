@@ -10,10 +10,13 @@ Maintainer: Loukia Spineli <Spineli.Loukia@mh-hannover.de>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: GPL (>= 3) 
+URL: https://CRAN.R-project.org/package=tracenma, https://loukiaspin.github.io/tracenma/
+BugReports: https://github.com/LoukiaSpin/tracenma/issues
 Depends: 
     R (>= 4.0.0)
 Suggests: 
     rmarkdown
 Encoding: UTF-8
+Language: en-US
 LazyData: true
 RoxygenNote: 7.2.3
