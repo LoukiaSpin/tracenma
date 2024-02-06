@@ -9,9 +9,6 @@
 #'
 #' @param pmid An object of S3 class \code{\link{run_sensitivity}}.
 #'   See 'Value' in \code{\link{run_sensitivity}}.
-#' @param year A character vector with two elements indicating the pairwise
-#'   comparison of interest. The first element refers to the 'experimental'
-#'   and the second element to the 'control' intervention of the comparison.
 #'
 #' @return
 #'   \code{balloon_plot} returns two enhanced balloon plots for one

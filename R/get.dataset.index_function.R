@@ -1,4 +1,4 @@
-#' Get the index of specific datasets
+#' Get the index of specific dataset(s)
 #'
 #' @description
 #'   Creates the enhanced balloon plot for the summary effect size and
@@ -66,31 +66,32 @@
 #'              drug_names = interv_names)
 #'
 #' @export
-get.dataset.index <- function (pmid,
-                               year = NULL) {
+get.dataset.index <- function (pmid, year = NULL) {
 
 
   ## Default arguments
   # 'pmid' argument
-  pmid <- if (missing(pmid)) {
-    stop("'pmid' must be specified.", call. = FALSE)
-  } else if (any(unique(!is.element(pmid, index[, 2])) == TRUE |
+  pmid <- if (is.null(year) & missing(pmid)) {
+    stop("Argument 'pmid' must be specified", call. = FALSE)
+  } else if (is.null(year) &
+             any(unique(!is.element(pmid, index[, 2])) == TRUE |
                  length(unique(!is.element(pmid, index[, 2]))) > 1)) {
     stop("This PMID value does not exist. Check 'index'.", call. = FALSE)
-  } else {
+  } else if (is.null(year)) {
     pmid
+  } else if (!is.null(year)) {
+    message("Argument 'pmid' will be ignored.")
+    NULL
   }
 
   # 'year' argument
   year <- if (any(!is.null(year) & length(year) > 1)) {
-    stp("'year' is scalar.", call. = FALSE)
+    stop("Argument 'year' is scalar.", call. = FALSE)
   } else if (any(!is.null(year) & !is.element(year, index[, 4]))) {
     stop("This Year does not exist. Check 'index'.", call. = FALSE)
   } else if (any(!is.null(year) & (length(year) == 1 |
                                    is.element(year, index[, 4])))) {
     year
-  } else {
-    NULL
   }
 
 
