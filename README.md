@@ -75,13 +75,13 @@ Now, let us access the systematic reviews with PMID numbers 16951908 and 1793216
 
 ``` r
 get.dataset.index(pmid = c(16951908, 17932160))
-#>    nmadb.ID     PMID  First.Author Year          Journal.Name Title
-#> 11   480655 16951908   Vestergaard 2007        Osteoporos Int ...
-#> 12   501309 17932160           Lam 2007                   BMJ ...
+#>    nmadb.ID     PMID  First.Author Year    Journal.Name Title
+#> 11   480655 16951908   Vestergaard 2007  Osteoporos Int ...
+#> 12   501309 17932160           Lam 2007             BMJ ...
                                                                                                                                                     
-#>      Outcome.Type Intervention.Comparison.Type Includes.ToC.where            Source.ToC
-#> 11      Objective   pharmacological vs placebo          Main text               Table 1
-#> 12      Objective   non-pharmacological vs any          Main text               Table 1
+#>      Outcome.Type Intervention.Comparison.Type Includes.ToC.where Source.ToC
+#> 11      Objective   pharmacological vs placebo          Main text    Table 1
+#> 12      Objective   non-pharmacological vs any          Main text    Table 1
 ```
 
 ### Access a specific dataset
