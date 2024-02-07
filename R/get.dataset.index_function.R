@@ -5,9 +5,9 @@
 #'   reviews found in the database using their PMID number or year of
 #'   publication.
 #'
-#' @param pmid A scalar or vector with the PMID number of the systematic
+#' @param pmid A scalar or vector with the PMID number(s) of the systematic
 #'   reviews found in the database.
-#' @param year A scalar to define the year publication of interest.
+#' @param year A scalar to define the year of publication.
 #'   \code{get.dataset.index} will return all systematic reviews found in the
 #'   database under this year.
 #'
@@ -59,8 +59,9 @@
 #'   systematic reviews with available data
 #'   (i.e., \code{Data.available == "True"} when using the function
 #'   \code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
-#'   during extraction, for instance, due to the reporting quality and data of
-#'   the systematic review relating to the extraction process.
+#'   during extraction, for instance, due to the reporting quality issues and
+#'   data unavailability of the systematic review relating to the extraction
+#'   process.
 #'
 #' @author {Loukia M. Spineli}
 #'

@@ -10,14 +10,20 @@
 #'   development and appraisal to assess transitivity assumption quantitatively.
 #'
 #' @details
-#'   R-package \bold{tracenma} is built upon the R-package \bold{nmadb} (version
-#'   1.2.0) by using the provided database to define the set of connected
-#'   networks to extract available aggregate study-level clinical and
-#'   methodological characteristics (that may act as effect modifiers) from the
-#'   corresponding systematic reviews. The database of \bold{tracenma} currently
-#'   includes a subset of the systematic reviews available in \bold{nmadb};
-#'   the included systematic reviews were published between 2004 and 2015 and
-#'   had available data characteristics for extraction.
+#'   R-package \bold{tracenma} is built upon the R-package
+#'   \href{https://CRAN.R-project.org/package=nmadb}{nmadb} (version 1.2.0) by
+#'   using the provided database to define the set of connected networks to
+#'   extract available aggregate study-level clinical and methodological
+#'   characteristics (that may act as effect modifiers) from the corresponding
+#'   systematic reviews. The database of \bold{tracenma} currently includes a
+#'   subset of the systematic reviews available in
+#'   \href{https://CRAN.R-project.org/package=nmadb}{nmadb}; the included
+#'   systematic reviews were published between 2004 and 2015 and had available
+#'   data characteristics for extraction.
+#'
+#'   \bold{tracenma} comprises functions to access the catalogue with the
+#'   available systematic reviews with network meta-analysis and datasets with
+#'   the extracted characteristics.
 #'
 #'   \bold{tracenma} should only be used for the purpose of developing and
 #'   appraising methodology to assess the transitivity assumption
@@ -30,7 +36,7 @@
 #'   research field. The latter also requires that the authors of systematic
 #'   reviews are familiar with the notion of effect modification. Therefore, the
 #'   extracted characteristics may not comprise a complete set of the
-#'   necessary effect modifiers for the investigated research field.
+#'   necessary effect modifiers for the various investigated research fields.
 #'
 #'   Furthermore, most of the included systematic reviews reported the
 #'   characteristics inconsistently across the studies. To achieve a
@@ -39,10 +45,6 @@
 #'   characteristics and 2) subjective judgments for qualitative
 #'   characteristics. Therefore, the accuracy of the extracted data may have
 #'   been compromised to some extent.
-#'
-#'   \bold{tracenma} comprises functions to access the catalogue with the
-#'   available systematic reviews with network meta-analysis and datasets with
-#'   the extracted characteristics.
 #'
 #'   Type \code{citation("tracenma")} on how to cite \bold{tracenma}.
 #'
@@ -57,7 +59,7 @@
 #'
 #' @references
 #' Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
-#' R package version 1.2.0. 2019. https://CRAN.R-project.org/package=nmadb
+#' R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>.
 #'
 #' Wan X, Wang W, Liu J, Tong T. Estimating the sample mean and standard
 #' deviation from the sample size, median, range and/or interquartile range.

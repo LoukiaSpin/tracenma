@@ -21,9 +21,9 @@ Function to retrieve the dataset with aggregate study-level clinical and
   from the selected systematic review of the database.
 }
 \details{
-Each dataset refers to a connected network for a specific outcome. The R
-  package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was used to
-  retrieve the corresponding dataset. Specifically, the function
+The selected dataset refers to a connected network for a specific outcome.
+  The R package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was
+  used to retrieve the corresponding dataset. Specifically, the function
   \code{\link[nmadb:readByID]{readByID}} was employed to download the dataset
   in the long format. Then, the function
   \code{\link[netmeta:pairwise]{pairwise}} of the R package

@@ -7,10 +7,10 @@
 get.dataset.index(pmid, year = NULL)
 }
 \arguments{
-\item{pmid}{A scalar or vector with the PMID number of the systematic
+\item{pmid}{A scalar or vector with the PMID number(s) of the systematic
 reviews found in the database.}
 
-\item{year}{A scalar to define the year publication of interest.
+\item{year}{A scalar to define the year of publication.
 \code{get.dataset.index} will return all systematic reviews found in the
 database under this year.}
 }
@@ -67,8 +67,9 @@ When \code{year} is specified, the argument \code{pmid} should be NULL.
   systematic reviews with available data
   (i.e., \code{Data.available == "True"} when using the function
   \code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
-  during extraction, for instance, due to the reporting quality and data of
-  the systematic review relating to the extraction process.
+  during extraction, for instance, due to the reporting quality issues and
+  data unavailability of the systematic review relating to the extraction
+  process.
 }
 \examples{
 # For one systematic review with PMID number 25626481.
