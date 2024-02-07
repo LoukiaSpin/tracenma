@@ -22,8 +22,11 @@ corresponding systematic reviews. Currently, `tracenma` includes a subset of the
 systematic reviews available in 
 [nmadb](https://CRAN.R-project.org/package=nmadb).
 
-The `tracenma` R package should **only** be used to develop and appraise the 
+👉 The `tracenma` R package should **only** be used to develop and appraise the 
 methodology to assess the transitivity assumption quantitatively.
+
+👎 The `tracenma` R package should **not** be used, for instance, to map the 
+characteristics reported in specific healthcare fields of the database.
 
 ## Getting started
 
