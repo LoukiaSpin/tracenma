@@ -15,6 +15,13 @@ systematic reviews with network meta-analysis published from 2004 to 2015.
 systematic reviews and the datasets with the extracted characteristics, 
 comprising the database.
 
+The package is built upon the R package 
+[nmadb](https://CRAN.R-project.org/package=nmadb) (version 1.2.0) to define the 
+eligible connected networks to extract the available characteristics from the 
+corresponding systematic reviews. Currently, `tracenma` includes a subset of the 
+systematic reviews available in 
+[nmadb](https://CRAN.R-project.org/package=nmadb).
+
 The `tracenma` R package should **only** be used to develop and appraise the 
 methodology to assess the transitivity assumption quantitatively.
 
@@ -34,7 +41,7 @@ or run the following code to install the development version of the package:
 
 ### Access the catalogue of the database
 
-To access the complete catalogue with all 217 systematic reviews and their 
+To access the complete catalogue with all 217 systematic reviews with their 
 characteristics, type `index`. 
 
 ``` r
@@ -108,6 +115,8 @@ get.dataset(pmid = 16951908)
 #> # ℹ 15 more rows
 #> # ℹ Use `print(n = ...)` to see more rows
 ``` 
+
+That's it for the moment! 😎 ☕
 
 ## Funding source
 
