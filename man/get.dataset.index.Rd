@@ -2,74 +2,95 @@
 % Please edit documentation in R/get.dataset.index_function.R
 \name{get.dataset.index}
 \alias{get.dataset.index}
-\title{Get the index of specific datasets}
+\title{Get the index of specific dataset(s)}
 \usage{
 get.dataset.index(pmid, year = NULL)
 }
 \arguments{
-\item{pmid}{An object of S3 class \code{\link{run_sensitivity}}.
-See 'Value' in \code{\link{run_sensitivity}}.}
+\item{pmid}{A scalar or vector with the PMID number of the systematic
+reviews found in the database.}
 
-\item{year}{A character vector with two elements indicating the pairwise
-comparison of interest. The first element refers to the 'experimental'
-and the second element to the 'control' intervention of the comparison.}
+\item{year}{A scalar to define the year publication of interest.
+\code{get.dataset.index} will return all systematic reviews found in the
+database under this year.}
 }
 \value{
-\code{balloon_plot} returns two enhanced balloon plots for one
-  comparison (see 'Details'):
-  \item{plot_effect_size}{The enhanced balloon plot for the
-  summary effect size (according to the argument \code{measure} inherited
-  by \code{\link{run_sensitivity}}) for one pairwise comparison.}
-  \item{plot_tau}{The enhanced balloon plot for \emph{tau}. When the
-  fixed-effect model has been performed in \code{\link{run_sensitivity}},
-  the function will not return the \code{plot_tau}.}
+\code{get.dataset.index} returns a vector (when \code{pmid} is scalar) or a
+  data-frame (when \code{pmid} is a vector) with the following
+  characteristics (column names):
+  \tabular{ll}{
+   \strong{nmadb.ID} \tab The ID number as provided in the R package
+   \href{https://CRAN.R-project.org/package=nmadb}{nmadb}.\cr
+   \tab \cr
+   \strong{PMID} \tab The PMID number.\cr
+   \tab \cr
+   \strong{First.Author} \tab The name of the first author.\cr
+   \tab \cr
+   \strong{Year} \tab The year of publication.\cr
+   \tab \cr
+   \strong{Journal.Name} \tab The abbreviated name of the journal.\cr
+   \tab \cr
+   \strong{Title} \tab The title of the systematic review.\cr
+   \tab \cr
+   \strong{Outcome.Type} \tab The outcome type as suggested by Turner et al.
+   (2012) and distinguished into objective, semi-objective and subjective.\cr
+   \tab \cr
+   \strong{Intervention.Comparison.Type} \tab The treatment-comparator type
+   as suggested by Turner et al. (2012) and distinguished into
+   pharmacological versus placebo, pharmacological versus pharmacological,
+   and non-pharmacological versus any.\cr
+   \tab \cr
+   \strong{Includes.ToC.where} \tab Whether the extracted study-level
+   aggregate characteristics were found in the main article, Appendix or
+   both.\cr
+   \tab \cr
+   \strong{Source.ToC} \tab The exact location in the systematic review
+   where the extracted study-level aggregate characteristics were found, such
+   as Table X in the main article, and/ or Appendix.\cr
+   \tab \cr
+   }
 }
 \description{
-Creates the enhanced balloon plot for the summary effect size and
-  between-trial standard deviation, \emph{tau}, under different scenarios
-  about the missingness parameter for a pair of interventions.
-  \code{balloon_plot} uses the scenarios considered in
-  \code{\link{run_sensitivity}}.
+A function to retrieve the characteristics of one of more systematic
+  reviews found in the database using their PMID number or year of
+  publication.
 }
 \details{
-For the \code{plot_effect_size} of the selected pairwise comparison,
-  the different colours and sizes of the bubbles reflect the
-  posterior standard deviation and the posterior mean, respectively.
-  A colour key appears below the plot. The size of the bubble is proportional
-  to the corresponding posterior mean.
-  Crossed bubbles indicate scenarios with conclusive evidence (the
-  95\% credible interval excludes the null value), and filled bubbles
-  indicate scenarios with inconclusive evidence (the 95\% credible interval
-  includes the null value). The missing-at-random assumption (primary
-  analysis) is labeled in a white frame.
-  Both axes illustrate the scenarios as specified in the argument
-  \code{mean_scenarios} of the \code{\link{run_sensitivity}}:
-  the x-axis refers to the 'experimental' intervention, and the y-axis refers
-  to the 'control' intervention.
+When \code{year} is specified, the argument \code{pmid} is ignored, and
+  \code{get.dataset.index} returns all systematic reviews found in the
+  database under this year.
 
-  The same enhanced balloon plot is created for \emph{tau} (\code{plot_tau}).
+  Except for \strong{PMID}, \strong{Includes.ToC.where}, and
+  \strong{Source.ToC}, all other characteristics were retrieved from the R
+  package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} using the
+  function \code{\link[nmadb:getNMADB]{getNMADB}} and subsetting to those
+  systematic reviews with available data
+  (i.e., \code{Data.available == "True"} when using the function
+  \code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
+  during extraction, for instance, due to the reporting quality and data of
+  the systematic review relating to the extraction process.
 }
 \examples{
-data("pma.taylor2004")
+# For one systematic review with PMID number 25626481.
+get.dataset.index(pmid = 25626481)
 
-# Read results from 'run_sensitivity' (using the default arguments)
-res_sens <- readRDS(system.file('extdata/res_sens_taylor.rds',
-                    package = 'rnmamod'))
+# For two systematic reviews with PMID numbers 25626481 and 21328309,
+# respectively.
+get.dataset.index(pmid = c(25626481, 21328309))
 
-# The names of the interventions in the order they appear in the dataset
-interv_names <- c("placebo", "inositol")
-
-# Create the enhanced balloon plot for 'inositol versus placebo'
-balloon_plot(sens = res_sens,
-             compar = c("inositol", "placebo"),
-             drug_names = interv_names)
+# For systematic reviews published during 2010. The argument 'pmid' does not
+# need to be specified.
+get.dataset.index(year = 2010)
 
 }
 \references{
-Spineli LM, Kalyvas C, Papadimitropoulou K. Quantifying the robustness of
-primary analysis results: A case study on missing outcome data in pairwise
-and network meta-analysis. \emph{Res Synth Methods}
-2021;\bold{12}(4):475--490. doi: https://doi.org/10.1002/jrsm.1478
+Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JP. Predicting the extent
+of heterogeneity in meta-analysis, using empirical data from the Cochrane
+Database of Systematic Reviews.
+\emph{Int J Epidemiol} 2012;\bold{41}(3):818--27. doi: 10.1093/ije/dys041.
+}
+\seealso{
+\code{\link[nmadb:getNMADB]{getNMADB}}
 }
 \author{
 {Loukia M. Spineli}
