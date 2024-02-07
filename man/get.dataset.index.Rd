@@ -56,8 +56,8 @@ A function to retrieve the characteristics of one of more systematic
   publication.
 }
 \details{
-When \code{year} is specified, the argument \code{pmid} is ignored, and
-  \code{get.dataset.index} returns all systematic reviews found in the
+When \code{year} is specified, the argument \code{pmid} should be NULL.
+  Then, \code{get.dataset.index} returns all systematic reviews found in the
   database under this year.
 
   Except for \strong{PMID}, \strong{Includes.ToC.where}, and
@@ -74,13 +74,13 @@ When \code{year} is specified, the argument \code{pmid} is ignored, and
 # For one systematic review with PMID number 25626481.
 get.dataset.index(pmid = 25626481)
 
-# For two systematic reviews with PMID numbers 25626481 and 21328309,
+# For two systematic reviews with PMID numbers 25626481 and 15147585,
 # respectively.
-get.dataset.index(pmid = c(25626481, 21328309))
+#get.dataset.index(pmid = c(25626481, 15147585))
 
 # For systematic reviews published during 2010. The argument 'pmid' does not
 # need to be specified.
-get.dataset.index(year = 2010)
+get.dataset.index(pmid = NULL, year = 2010)
 
 }
 \references{

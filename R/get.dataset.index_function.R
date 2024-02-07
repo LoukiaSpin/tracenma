@@ -78,7 +78,7 @@
 #'
 #' # For two systematic reviews with PMID numbers 25626481 and 15147585,
 #' # respectively.
-#' get.dataset.index(pmid = c(25626481, 15147585))
+#' #get.dataset.index(pmid = c(25626481, 15147585))
 #'
 #' # For systematic reviews published during 2010. The argument 'pmid' does not
 #' # need to be specified.
