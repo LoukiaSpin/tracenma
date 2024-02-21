@@ -35,10 +35,11 @@ Run the following code to install and load the package from CRAN:
     install.packages("tracenma")
     library(tracenma)
 
-or run the following code to install the development version of the package:
+or run the following code to install and load the development version of the package:
 
     install.packages("devtools")
     devtools::install_github("LoukiaSpin/tracenma")
+    library(tracenma)
 
 ## Example
 
