@@ -1,7 +1,7 @@
 #' @name tracenma-package
 #' @aliases tracenma tracenma-package
 #'
-#' @title tracenma: Database for Transitivity Methodology in Network Meta-Analysis
+#' @title tracenma: Database for Developing Transitivity Methodology in Network Meta-Analysis
 #'
 #' @description
 #'   An R package for accessing a database with extracted aggregate study-level

@@ -1,6 +1,6 @@
 Type: Package
 Package: tracenma
-Title: Database for Transitivity Methodology in Network Meta-Analysis
+Title: Database for Developing Transitivity Methodology in Network Meta-Analysis
 Version: 0.1.0
 Date: 2024-02-07
 Authors@R: c(

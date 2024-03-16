@@ -1,4 +1,4 @@
-# tracenma: Database for Transitivity Methodology in Network Meta-Analysis   <img src="man/figures/logo.png" align="right" width="200" />    
+# tracenma: Database for Developing Transitivity Methodology in Network Meta-Analysis   <img src="man/figures/logo.png" align="right" width="200" />    
 
 Official Git repository of `tracenma` R package
 
