@@ -3,7 +3,7 @@
 \name{tracenma-package}
 \alias{tracenma-package}
 \alias{tracenma}
-\title{tracenma: Database for Transitivity Methodology in Network Meta-Analysis}
+\title{tracenma: Database for Developing Transitivity Methodology in Network Meta-Analysis}
 \description{
 An R package for accessing a database with extracted aggregate study-level
   characteristics (that may act as effect modifiers) from 217 systematic
