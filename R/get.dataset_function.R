@@ -48,8 +48,9 @@
 #'
 #' @author {Loukia M. Spineli}
 #'
-#' @seealso \code{\link[nmadb:getNMADB]{getNMADB}},
-#'   \code{\link[netmeta:pairwise]{pairwise}}
+#' @seealso \code{\link[netmeta:pairwise]{pairwise}},
+#'   \code{\link[nmadb:readByID]{readByID}}
+#'
 #'
 #' @examples
 #' # Get dataset for systematic review with PMID number 25626481

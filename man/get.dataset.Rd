@@ -4,24 +4,40 @@
 \alias{get.dataset}
 \title{Get the selected dataset}
 \usage{
-get.dataset(pmid)
+get.dataset(pmid, show.index = FALSE, show.type = FALSE)
 }
 \arguments{
 \item{pmid}{A scalar with the PMID number of the systematic review found in
 the database.}
+
+\item{show.index}{Logical to indicate whether to return a data-frame with the
+full name of the abbreviated characteristics. The default is
+\code{FALSE} (do not report).}
+
+\item{show.type}{Logical to indicate whether to return a data-frame with the
+type (Demographic, Clinical, Methodological) and subtype (Age, Ethnicity,
+Intervention, Outcome, Participant, Risk of bias, Sex, Study design, Study
+setting, Withdrawals) of the characteristics. The default is \code{FALSE}
+(do not report).}
 }
 \value{
-\code{get.dataset} returns a data-frame with rows referring to the studies
-  and columns to the aggregate study-level characteristics as extracted from
-  the report of the corresponding systematic review.
+\code{get.dataset} returns the following:
+   \item{Dataset}{A data-frame (tibble style) with rows referring to the
+   studies and columns to the aggregate study-level characteristics as
+   extracted from the report of the corresponding systematic review.}
+   \item{Characteristics_index}{A data-frame (tibble style) with the rows
+   referring to the extracted characteristics (abbreviated name) and columns
+   to the their full name (if \code{show.index = TRUE}), their type and
+   subtype (if \code{show.type = TRUE}).}
 }
 \description{
-Function to retrieve the dataset with aggregate study-level clinical and
+Function to retrieve a dataset with aggregate study-level clinical and
   methodological characteristics (that may act as effect modifiers) extracted
   from the selected systematic review of the database.
 }
 \details{
-The selected dataset refers to a connected network for a specific outcome.
+The selected dataset refers to a connected network for a specific outcome
+  studied in the corresponding systematic review.
   The R package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was
   used to retrieve the corresponding dataset. Specifically, the function
   \code{\link[nmadb:readByID]{readByID}} was employed to download the dataset
@@ -45,8 +61,8 @@ get.dataset(pmid = 25626481)
 
 }
 \seealso{
-\code{\link[nmadb:getNMADB]{getNMADB}},
-  \code{\link[netmeta:pairwise]{pairwise}}
+\code{\link[netmeta:pairwise]{pairwise}},
+  \code{\link[nmadb:readByID]{readByID}}
 }
 \author{
 {Loukia M. Spineli}
