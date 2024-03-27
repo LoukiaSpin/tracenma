@@ -9,6 +9,11 @@ New submission
 Status: 1 NOTE
 New submission
 
+* **R version 4.4.0 alpha (2024-03-26 r86209 ucrt)**
+
+Status: 1 NOTE
+New submission
+
 ### R CMD check results
 
 0 errors | 0 warnings | 0 notes
