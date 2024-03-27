@@ -14,7 +14,7 @@ Description: Functions to access the database of 217 data-frames with aggregate
     shall only be used for developing and appraising the methodology to assess 
     the transitivity assumption quantitatively.
 License: GPL (>= 3) 
-URL: https://CRAN.R-project.org/package=tracenma, https://loukiaspin.github.io/tracenma/
+URL: https://CRAN.R-project.org/package=tracenma, https://github.com/LoukiaSpin/tracenma, https://loukiaspin.github.io/tracenma/
 BugReports: https://github.com/LoukiaSpin/tracenma/issues
 Depends: 
     R (>= 4.0.0)
