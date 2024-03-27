@@ -13,7 +13,7 @@ An R package for accessing a database with extracted aggregate study-level
 \details{
 R-package \bold{tracenma} is built upon the R-package
   \href{https://CRAN.R-project.org/package=nmadb}{nmadb} (version 1.2.0) by
-  using the provided database to define the set of connected networks to
+  using the provided database to define the set of connected networks and
   extract available aggregate study-level clinical and methodological
   characteristics (that may act as effect modifiers) from the corresponding
   systematic reviews. The database of \bold{tracenma} currently includes a
