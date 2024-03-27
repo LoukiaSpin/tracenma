@@ -9,9 +9,15 @@
 #'   the database.
 #'
 #' @return
-#'   \code{get.dataset} returns a data-frame with rows referring to the studies
-#'   and columns to the aggregate study-level characteristics as extracted from
-#'   the report of the corresponding systematic review.
+#'   \code{get.dataset} returns the following:
+#'   \tabular{ll}{
+#'    \strong{Dataset} \tab a data-frame with rows referring to the studies and
+#'    columns to the aggregate study-level characteristics as extracted from the
+#'    report of the corresponding systematic review.\cr
+#'    \tab \cr
+#'    \strong{Characteristics_index} \tab XX.\cr
+#'    \tab \cr
+#'    }
 #'
 #' @details
 #'   The selected dataset refers to a connected network for a specific outcome.
@@ -59,9 +65,15 @@ get.dataset <- function(pmid) {
   }
 
 
-  ## Get the datase that corresponds to selected 'pmid'
+  ## Get the dataset that corresponds to selected 'pmid'
   get.dataset <-
-    readRDS(system.file(paste0("extdata/", pmid,".rds"), package = "tracenma"))
+    readRDS(system.file(paste0("extdata/", pmid, ".rds"), package = "tracenma"))
 
-  return(get.dataset)
+
+  ## Get the index with the characteristics that corresponds to selected 'pmid'
+  get.chars.index <-
+    readRDS(system.file(paste0("extdata/", pmid, "_Chars.rds"), package = "tracenma"))
+
+  return(list(Dataset = get.dataset,
+              Characteristics_index = get.chars.index))
 }
