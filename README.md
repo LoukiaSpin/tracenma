@@ -6,6 +6,10 @@ Official Git repository of `tracenma` R package
 [![R-CMD-check](https://github.com/LoukiaSpin/tracenma/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/LoukiaSpin/tracenma/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+## Website
+
+The [website](https://loukiaspin.github.io/tracenma/) of `tracenma` currently includes a structured reference list to facilitate access to the documentation of the functions available in the package.
+
 ## Description 
 
 The `tracenma` R package contains a database with extracted aggregate 
