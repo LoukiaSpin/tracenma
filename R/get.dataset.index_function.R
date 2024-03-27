@@ -122,7 +122,7 @@ get.dataset.index <- function (pmid,
   }
 
   ## Collect results
-  Title <- Comment <- NULL
+  Title <- Comment <- NA
   results <- if (show.title == FALSE & show.comment == FALSE) {
     subset(index.sr, select = -c(Title, Comment))
   } else if (show.title == TRUE & show.comment == FALSE) {
