@@ -11,6 +11,21 @@ field in the form Authors (year) <doi:10.....> or <arXiv:.....>.
 
 * The typo with the commented second example in get.dataset.index.Rd is now corrected.
 
+* **R version 4.4.0 alpha (2024-03-26 r86209 ucrt)**
+
+Status: 1 NOTE
+New submission
+
+* **R version 4.3.3 (2024-02-29 ucrt)**
+
+Status: 1 NOTE
+New submission
+
+* **R version 4.2.3 (2023-03-15 ucrt)**
+
+Status: 1 NOTE
+New submission
+
 ### R CMD check results
 
 0 errors | 0 warnings | 0 notes
