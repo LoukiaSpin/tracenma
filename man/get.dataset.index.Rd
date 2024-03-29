@@ -23,50 +23,50 @@ to extraction notes about the selected systematic review(s). The default is
 }
 \value{
 \code{get.dataset.index} returns a vector (when \code{pmid} is scalar) or a
-  data-frame (when \code{pmid} is a vector) with the following
-  characteristics (column names):
-  \item{nmadb.ID}{The ID number as provided in the R package
-   \href{https://CRAN.R-project.org/package=nmadb}{nmadb}.}
-  \item{PMID}{The PMID number.}
-  \item{First.Author}{The name of the first author.}
-  \item{Year}{The year of publication.}
-  \item{Journal.Name}{The abbreviated name of the journal.}
-  \item{Title}{The title of the systematic review.}
-  \item{Outcome.Type}{The outcome type as suggested by Turner et al.
-   (2012) and distinguished into objective, semi-objective and subjective.}
-  \item{Intervention.Comparison.Type}{The treatment-comparator type
-   as suggested by Turner et al. (2012) and distinguished into
-   pharmacological versus placebo, pharmacological versus pharmacological,
-   and non-pharmacological versus any.}
-  \item{Includes.ToC.where}{Whether the extracted study-level
-   aggregate characteristics were found in the main article, Appendix or
-   both.}
-  \item{Source.ToC}{The exact location in the systematic review
-   where the extracted study-level aggregate characteristics were found, such
-   as Table(s) in the main article, and/ or Appendix.}
-  \item{Comment}{Notes related to the extraction for the selected systematic
-   review(s).}
+data-frame (when \code{pmid} is a vector) with the following
+characteristics (column names):
+\item{nmadb.ID}{The ID number as provided in the R package
+  \href{https://CRAN.R-project.org/package=nmadb}{nmadb}.}
+\item{PMID}{The PMID number.}
+\item{First.Author}{The name of the first author.}
+\item{Year}{The year of publication.}
+\item{Journal.Name}{The abbreviated name of the journal.}
+\item{Title}{The title of the systematic review.}
+\item{Outcome.Type}{The outcome type as suggested by Turner et al.
+  (2012) and distinguished into objective, semi-objective and subjective.}
+\item{Intervention.Comparison.Type}{The treatment-comparator type
+  as suggested by Turner et al. (2012) and distinguished into
+  pharmacological versus placebo, pharmacological versus pharmacological,
+  and non-pharmacological versus any.}
+\item{Includes.ToC.where}{Whether the extracted study-level
+  aggregate characteristics were found in the main article, Appendix or
+  both.}
+\item{Source.ToC}{The exact location in the systematic review
+  where the extracted study-level aggregate characteristics were found, such
+  as Table(s) in the main article, and/ or Appendix.}
+\item{Comment}{Notes related to the extraction for the selected systematic
+  review(s).}
 }
 \description{
-A function to retrieve the characteristics of one of more systematic
-  reviews found in the database using their PMID number or year of
-  publication.
+Retrieving the characteristics of one of more systematic
+reviews found in the database using their PMID number or year of
+publication.
 }
 \details{
 When \code{year} is specified, the argument \code{pmid} should be NULL.
-  Then, \code{get.dataset.index} returns all systematic reviews found in the
-  database under this year.
+Then, \code{get.dataset.index} returns all systematic reviews found in the
+database under this year.
 
-  Except for \strong{PMID}, \strong{Includes.ToC.where}, and
-  \strong{Source.ToC}, all other characteristics were retrieved from the R
-  package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} using the
-  function \code{\link[nmadb:getNMADB]{getNMADB}} and subsetting to those
-  systematic reviews with available data
-  (i.e., \code{Data.available == "True"} when using the function
-  \code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
-  during extraction, for instance, due to the reporting issues and data
-  unavailability of the systematic review relating to the extraction
-  process.
+Except for \strong{PMID}, \strong{Includes.ToC.where}, and
+\strong{Source.ToC}, all other characteristics were retrieved from the R
+package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} using the
+function \code{\link[nmadb:getNMADB]{getNMADB}} and subsetting to those
+systematic reviews with available data
+(i.e., \code{Data.available == "True"} when using the function
+\code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
+during extraction, for instance, due to the reporting issues and data
+unavailability of the systematic review relating to the extraction
+process.
 }
 \examples{
 # For one systematic review with PMID number 25626481.
@@ -74,10 +74,9 @@ get.dataset.index(pmid = 25626481)
 
 # For two systematic reviews with PMID numbers 25626481 and 15147585,
 # respectively.
-#get.dataset.index(pmid = c(25626481, 15147585))
+get.dataset.index(pmid = c(25626481, 15147585))
 
-# For systematic reviews published during 2010. The argument 'pmid' does not
-# need to be specified.
+# For systematic reviews published during 2010.
 get.dataset.index(pmid = NULL, year = 2010)
 
 }

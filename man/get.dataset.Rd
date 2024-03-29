@@ -22,41 +22,40 @@ setting, Withdrawals) of the characteristics. The default is \code{FALSE}
 }
 \value{
 \code{get.dataset} returns the following:
-   \item{Dataset}{A data-frame (tibble style) with rows referring to the
-   studies and columns to the aggregate study-level characteristics as
-   extracted from the report of the corresponding systematic review.}
-   \item{Characteristics_index}{A data-frame (tibble style) with the rows
-   referring to the extracted characteristics (abbreviated name) and columns
-   to the their full name (if \code{show.index = TRUE}), their type and
-   subtype (if \code{show.type = TRUE}).}
+\item{Dataset}{A data-frame (tibble style) with rows referring to the
+  studies and columns to the study-level aggregate characteristics as
+  extracted from the report of the corresponding systematic review.}
+\item{Characteristics_index}{A data-frame (tibble style) with the rows
+  referring to the extracted characteristics (abbreviated name) and columns
+  to the their full name (if \code{show.index = TRUE}), their type and
+  subtype (if \code{show.type = TRUE}).}
 }
 \description{
-Function to retrieve a dataset with aggregate study-level clinical and
-  methodological characteristics (that may act as effect modifiers) extracted
-  from the selected systematic review of the database.
+Retrieving a dataset with study-level aggregate clinical and
+methodological characteristics (that may act as effect modifiers) extracted
+from the selected systematic review of the database.
 }
 \details{
 The selected dataset refers to a connected network for a specific outcome
-  studied in the corresponding systematic review.
-  The R package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was
-  used to retrieve the corresponding dataset. Specifically, the function
-  \code{\link[nmadb:readByID]{readByID}} was employed to download the dataset
-  in the long format. Then, the function
-  \code{\link[netmeta:pairwise]{pairwise}} of the R package
-  \href{https://CRAN.R-project.org/package=netmeta}{netmeta} was implemented
-  to convert the dataset into wide format with each row repeated as many
-  times as the number of possible comparisons made in the corresponding
-  study. The study names (or references) and treatment comparisons, as
-  returned by \code{\link[nmadb:readByID]{readByID}}, were used to locate the
-  studies in the corresponding report of the systematic review (and Appendix,
-  if available) and extract the characteristics available in the relevant
-  table(s). Each characteristic occupies one column in the dataset.
-  Characteristics pertaining to intervention features occupied one column for
-  the experimental and another for the control treatment in the corresponding
-  comparison.
+studied in the corresponding systematic review.
+The R package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was
+used to retrieve the corresponding dataset. Specifically, the function
+\code{\link[nmadb:readByID]{readByID}} was employed to download the dataset
+in the long format. Then, the function
+\code{\link[netmeta:pairwise]{pairwise}} of the R package
+\href{https://CRAN.R-project.org/package=netmeta}{netmeta} was implemented
+to convert the dataset into wide format with each row repeated as many
+times as the number of possible comparisons made in the corresponding
+study. The study names (or references) and treatment comparisons, as
+returned by \code{\link[nmadb:readByID]{readByID}}, were used to locate the
+studies in the corresponding report of the systematic review (and Appendix,
+if available) and extract the characteristics available in the relevant
+table(s). Each characteristic occupies one column in the dataset.
+Characteristics pertaining to intervention features occupied one column for
+the experimental and another for the control treatment in the corresponding
+comparison.
 }
 \examples{
-# Get dataset for systematic review with PMID number 25626481
 get.dataset(pmid = 25626481)
 
 }
