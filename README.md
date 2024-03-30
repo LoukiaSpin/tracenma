@@ -4,6 +4,9 @@ Official Git repository of `tracenma` R package
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/LoukiaSpin/tracenma/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/LoukiaSpin/tracenma/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/tracenma)](https://CRAN.R-project.org/package=tracenma)
+[![CRAN release data](https://www.r-pkg.org/badges/last-release/tracenma)](https://www.r-pkg.org/badges/last-release/tracenma)
+[![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/tracenma)](https://cranlogs.r-pkg.org/badges/grand-total/tracenma)
 <!-- badges: end -->
 
 ## Website
