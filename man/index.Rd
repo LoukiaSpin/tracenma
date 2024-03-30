@@ -55,19 +55,22 @@ both.\cr
 \tab \cr
 \strong{Source.ToC} \tab The exact location in the systematic review
 where the extracted study-level aggregate characteristics were found, such
-as Table X in the main article, or Appendix.\cr
+as Table X in the main article, and/ or Appendix.\cr
+\tab \cr
+\strong{Comment} \tab Notes related to the extraction for the selected
+systematic review(s).\cr
 \tab \cr
 }
 
-Except for \strong{PMID}, \strong{Includes.ToC.where}, and
-\strong{Source.ToC}, all other characteristics were retrieved from the R
+Except for \strong{PMID}, \strong{Includes.ToC.where}, \strong{Source.ToC},
+and \strong{Comment}, all other characteristics were retrieved from the R
 package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} using the
 function \code{\link[nmadb:getNMADB]{getNMADB}} and subsetting to those
 systematic reviews with available data
 (i.e., \code{Data.available == "True"} when using the function
 \code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
-during extraction, for instance, due to the reporting quality and data of
-the systematic review relating to the extraction process.
+during extraction, for instance, due to the limited reporting quality and
+data of the systematic review relating to the extraction process.
 }
 \seealso{
 \code{\link[nmadb:getNMADB]{getNMADB}}
