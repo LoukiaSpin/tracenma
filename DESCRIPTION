@@ -1,8 +1,8 @@
 Type: Package
 Package: tracenma
-Title: Database for Transitivity Methodology in Network Meta-Analysis
+Title: Database for Developing Transitivity Methodology in Network Meta-Analysis
 Version: 0.1.0
-Date: 2024-02-07
+Date: 2024-03-27
 Authors@R: c(
     person("Loukia", "Spineli", email = "Spineli.Loukia@mh-hannover.de", 
     role = c("aut", "cre"))
@@ -10,15 +10,17 @@ Authors@R: c(
 Maintainer: Loukia Spineli <Spineli.Loukia@mh-hannover.de>
 Description: Functions to access the database of 217 data-frames with aggregate 
     study-level characteristics (that may act as effect modifiers) extracted 
-    from published systematic reviews with network meta-analysis. The database 
-    shall only be used for developing and appraising the methodology to assess 
+    from published systematic reviews with network meta-analysis. The database shall 
+    only be used for developing and appraising the methodology to assess 
     the transitivity assumption quantitatively.
 License: GPL (>= 3) 
-URL: https://CRAN.R-project.org/package=tracenma, https://loukiaspin.github.io/tracenma/
+URL: https://CRAN.R-project.org/package=tracenma, https://github.com/LoukiaSpin/tracenma, https://loukiaspin.github.io/tracenma/
 BugReports: https://github.com/LoukiaSpin/tracenma/issues
 Depends: 
     R (>= 4.0.0)
 Suggests: 
+    netmeta,
+    nmadb,
     rmarkdown
 Config/testthat/edition: 3
 Encoding: UTF-8
