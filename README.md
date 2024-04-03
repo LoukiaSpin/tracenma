@@ -121,6 +121,10 @@ get.dataset(pmid = 16951908)
 
 That's it for the moment! 😎 ☕
 
+## Acknowledgements
+
+I would like to thank Juan Jose Yepes-Nuñez and [Andrés Mauricio García-Sierra](https://www.linkedin.com/in/andres-mauricio-garcia-sierra-980971125) for their valuable help during data curation of the extracted datasets for possible extraction errors.
+
 ## Funding source
 
 The development of the `tracenma` R package is funded by the **German Research Foundation** (Deutsche Forschungsgemeinschaft) (grant no. [SP 1664/2-1](https://gepris.dfg.de/gepris/projekt/462260733)) <div style="text-align: right"> <img src="man/figures/dfg_logo_schriftzug_blau_foerderung_en.png" width="280" height="100" align="right"></div>
