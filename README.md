@@ -131,7 +131,7 @@ That's it for the moment! 😎 ☕
 
 ## Acknowledgements
 
-I would like to thank Juan Jose Yepes-Nuñez and [Andrés Mauricio García-Sierra](https://www.linkedin.com/in/andres-mauricio-garcia-sierra-980971125) for their valuable help during data curation of the extracted datasets for possible extraction errors.
+I would like to thank [Juan Jose Yepes-Nuñez](www.linkedin.com/in/yepes-nunez) and [Andrés Mauricio García-Sierra](https://www.linkedin.com/in/andres-mauricio-garcia-sierra-980971125) for their valuable help during data curation of the extracted datasets for possible extraction errors.
 
 ## Funding source
 
