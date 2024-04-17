@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.0.8
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-04-16T12:06Z
+last_built: 2024-04-17T09:00Z
 urls:
   reference: https://loukiaspin.github.io/tracenma/reference
   article: https://loukiaspin.github.io/tracenma/articles
