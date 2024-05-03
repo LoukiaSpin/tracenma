@@ -70,7 +70,7 @@ head(index[, 1:5])
 
 Use the function `get.dataset.index` to get one or more  systematic reviews and 
 their characteristics. For instance, let us access the available systematic 
-reviews publish in 2007:
+reviews publish in 2007 using the _default_ arguments:
 
 ``` r
 get.dataset.index(pmid = NULL, year = 2007)
@@ -89,6 +89,11 @@ get.dataset.index(pmid = NULL, year = 2007)
 #> 12   non-pharmacological vs any          Main text                         Table 1
 ```
 
+Add the argument `show.title = TRUE` to access the article titles. Add the 
+argument `show.comment = TRUE` to activate the extraction-related comments 
+accompanying the articles. The default for both arguments is `FALSE` (do not 
+report).
+
 Now, let us access the systematic reviews with PMID numbers 16951908 and 17932160:
 
 ``` r
@@ -106,7 +111,8 @@ get.dataset.index(pmid = c(16951908, 17932160))
 
 Use the function `get.dataset` to get the dataset with the extracted 
 characteristics of a specific systematic review. For instance, let us access the 
-dataset of the systematic review with PMID number 16951908:
+dataset of the systematic review with PMID number 16951908 using the _default_ 
+arguments:
 
 ``` r
 get.dataset(pmid = 16951908)
@@ -126,6 +132,47 @@ get.dataset(pmid = 16951908)
 #> # ℹ 15 more rows
 #> # ℹ Use `print(n = ...)` to see more rows
 ``` 
+Adding the argument `show.index = TRUE` returns an _additional_ dataframe, 
+`$Characteristics_index` (following the dataset, which is skipped in the example 
+below) with the abbreviation (left column) and full name (right column) of each 
+characteristic:
+
+``` r
+get.dataset(pmid = 16951908, show.index = TRUE)
+#> $Characteristics_index
+#> # A tibble: 7 × 2
+#>   Abbreviation Full.name                              
+#>   <chr>        <chr>                                  
+#> 1 sex          sex                                    
+#> 2 sample.size  sample size                            
+#> 3 h.rPTH       human (recombinant) parathyroid hormone
+#> 4 calcium      calcium in mg/day                      
+#> 5 vitamin.D    vitamin D in IU/day                    
+#> 6 duration     trial duration in months               
+#> 7 quality      study quality  
+``` 
+
+Lastly, adding the argument `show.type = TRUE` enhances the _additional_ dataframe, 
+`$Characteristics_index`, with another two columns appearing on the right; the 
+`Characteristic.type` (clinical, demographic, methodological) and 
+`Characteristic.subtype` (participant, treatment, outcome, age, sex, ethnicity, 
+study design, study setting, risk of bias, withdrawals) for each characteristic:
+
+``` r
+get.dataset(pmid = 16951908, show.index = TRUE, show.type = TRUE)
+$Characteristics_index
+#> # A tibble: 7 × 4
+#>   Abbreviation Full.name                               Characteristic.type Characteristic.subtype
+#>   <chr>        <chr>                                   <chr>               <chr>                 
+#> 1 sex          sex                                     Demographic         Sex                   
+#> 2 sample.size  sample size                             Methodological      Study design          
+#> 3 h.rPTH       human (recombinant) parathyroid hormone Clinical            Intervention          
+#> 4 calcium      calcium in mg/day                       Clinical            Intervention          
+#> 5 vitamin.D    vitamin D in IU/day                     Clinical            Intervention          
+#> 6 duration     trial duration in months                Methodological      Study design          
+#> 7 quality      study quality                           Methodological      Risk of bias          
+``` 
+The default for both arguments is `FALSE` (do not report).
 
 That's it for the moment! 😎 ☕
 
