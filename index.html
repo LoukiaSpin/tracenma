@@ -119,7 +119,7 @@
 <div class="section level3">
 <h3 id="access-the-index-of-specific-datasets">Access the index of specific dataset(s)<a class="anchor" aria-label="anchor" href="#access-the-index-of-specific-datasets"></a>
 </h3>
-<p>Use the function <code>get.dataset.index</code> to get one or more systematic reviews and their characteristics. For instance, let us access the available systematic reviews publish in 2007:</p>
+<p>Use the function <code>get.dataset.index</code> to get one or more systematic reviews and their characteristics. For instance, let us access the available systematic reviews publish in 2007 using the <em>default</em> arguments:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/get.dataset.index.html">get.dataset.index</a></span><span class="op">(</span>pmid <span class="op">=</span> <span class="cn">NULL</span>, year <span class="op">=</span> <span class="fl">2007</span><span class="op">)</span></span>
 <span><span class="co">#&gt;    nmadb.ID     PMID  First.Author Year          Journal.Name   Outcome.Type</span></span>
@@ -135,6 +135,7 @@
 <span><span class="co">#&gt; 13   pharmacological vs placebo          Main text                    Table 2 to 4</span></span>
 <span><span class="co">#&gt; 15   pharmacological vs placebo          Both      Tables 1 &amp; 2, Appendix Tables 5</span></span>
 <span><span class="co">#&gt; 12   non-pharmacological vs any          Main text                         Table 1</span></span></code></pre></div>
+<p>Add the argument <code>show.title = TRUE</code> to access the article titles. Add the argument <code>show.comment = TRUE</code> to activate the extraction-related comments accompanying the articles. The default for both arguments is <code>FALSE</code> (do not report).</p>
 <p>Now, let us access the systematic reviews with PMID numbers 16951908 and 17932160:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/get.dataset.index.html">get.dataset.index</a></span><span class="op">(</span>pmid <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">16951908</span>, <span class="fl">17932160</span><span class="op">)</span><span class="op">)</span></span>
@@ -149,7 +150,7 @@
 <div class="section level3">
 <h3 id="access-a-specific-dataset">Access a specific dataset<a class="anchor" aria-label="anchor" href="#access-a-specific-dataset"></a>
 </h3>
-<p>Use the function <code>get.dataset</code> to get the dataset with the extracted characteristics of a specific systematic review. For instance, let us access the dataset of the systematic review with PMID number 16951908:</p>
+<p>Use the function <code>get.dataset</code> to get the dataset with the extracted characteristics of a specific systematic review. For instance, let us access the dataset of the systematic review with PMID number 16951908 using the <em>default</em> arguments:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/get.dataset.html">get.dataset</a></span><span class="op">(</span>pmid <span class="op">=</span> <span class="fl">16951908</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 25 × 12</span></span>
@@ -167,6 +168,34 @@
 <span><span class="co">#&gt; 10 Finkelstein 2003 (28)      1      6 control PTH+ALN   male          53   1-34      1000       400       30       3</span></span>
 <span><span class="co">#&gt; # ℹ 15 more rows</span></span>
 <span><span class="co">#&gt; # ℹ Use `print(n = ...)` to see more rows</span></span></code></pre></div>
+<p>Adding the argument <code>show.index = TRUE</code> returns an <em>additional</em> dataframe, <code>$Characteristics_index</code> (following the dataset, which is skipped in the example below) with the abbreviation (left column) and full name (right column) of each characteristic:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/get.dataset.html">get.dataset</a></span><span class="op">(</span>pmid <span class="op">=</span> <span class="fl">16951908</span>, show.index <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; $Characteristics_index</span></span>
+<span><span class="co">#&gt; # A tibble: 7 × 2</span></span>
+<span><span class="co">#&gt;   Abbreviation Full.name                              </span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;                                  </span></span>
+<span><span class="co">#&gt; 1 sex          sex                                    </span></span>
+<span><span class="co">#&gt; 2 sample.size  sample size                            </span></span>
+<span><span class="co">#&gt; 3 h.rPTH       human (recombinant) parathyroid hormone</span></span>
+<span><span class="co">#&gt; 4 calcium      calcium in mg/day                      </span></span>
+<span><span class="co">#&gt; 5 vitamin.D    vitamin D in IU/day                    </span></span>
+<span><span class="co">#&gt; 6 duration     trial duration in months               </span></span>
+<span><span class="co">#&gt; 7 quality      study quality  </span></span></code></pre></div>
+<p>Lastly, adding the argument <code>show.type = TRUE</code> enhances the <em>additional</em> dataframe, <code>$Characteristics_index</code>, with another two columns appearing on the right; the <code>Characteristic.type</code> (clinical, demographic, methodological) and <code>Characteristic.subtype</code> (participant, treatment, outcome, age, sex, ethnicity, study design, study setting, risk of bias, withdrawals) for each characteristic:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">get.dataset</span>(<span class="at">pmid =</span> <span class="dv">16951908</span>, <span class="at">show.index =</span> <span class="cn">TRUE</span>, <span class="at">show.type =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="sc">$</span>Characteristics_index</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 7 × 4</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">#&gt;   Abbreviation Full.name                               Characteristic.type Characteristic.subtype</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;                                   &lt;chr&gt;               &lt;chr&gt;                 </span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co">#&gt; 1 sex          sex                                     Demographic         Sex                   </span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">#&gt; 2 sample.size  sample size                             Methodological      Study design          </span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt; 3 h.rPTH       human (recombinant) parathyroid hormone Clinical            Intervention          </span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">#&gt; 4 calcium      calcium in mg/day                       Clinical            Intervention          </span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="co">#&gt; 5 vitamin.D    vitamin D in IU/day                     Clinical            Intervention          </span></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">#&gt; 6 duration     trial duration in months                Methodological      Study design          </span></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="co">#&gt; 7 quality      study quality                           Methodological      Risk of bias          </span></span></code></pre></div>
+<p>The default for both arguments is <code>FALSE</code> (do not report).</p>
 <p>That’s it for the moment! 😎 ☕</p>
 </div>
 </div>
