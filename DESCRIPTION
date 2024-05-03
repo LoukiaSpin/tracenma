@@ -22,8 +22,7 @@ Suggests:
     knitr,
     netmeta,
     nmadb,
-    rmarkdown,
-    rnmamod
+    rmarkdown
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
