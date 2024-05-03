@@ -19,9 +19,13 @@ BugReports: https://github.com/LoukiaSpin/tracenma/issues
 Depends: 
     R (>= 4.0.0)
 Suggests: 
+    knitr,
     netmeta,
     nmadb,
-    rmarkdown
+    rmarkdown,
+    rnmamod
+VignetteBuilder: 
+    knitr
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
