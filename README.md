@@ -66,7 +66,7 @@ head(index[, 1:5])
 #> 6   501211 16239897        Berner 2006 Int J Impot Res
 ```
 
-### Access the index of specific dataset(s)
+### Access the index of datasets published during a specific year
 
 Use the function `get.dataset.index` to get one or more  systematic reviews and 
 their characteristics. For instance, let us access the available systematic 
@@ -80,7 +80,7 @@ get.dataset.index(pmid = NULL, year = 2007)
 #> 13   501336 17651658        McLeod 2007 Health Technol Assess     Subjective
 #> 15   501395 17903393 Soares-Weiser 2007 Health Technol Assess Semi-objective
 #> 12   501309 17932160           Lam 2007                   BMJ      Objective
-                                                                                                                                                    
+                                                                                                                                                
 #>    Intervention.Comparison.Type Includes.ToC.where                      Source.ToC
 #> 11   pharmacological vs placebo          Main text                         Table 1
 #> 14   pharmacological vs placebo          Main text                         Table 1
@@ -89,12 +89,16 @@ get.dataset.index(pmid = NULL, year = 2007)
 #> 12   non-pharmacological vs any          Main text                         Table 1
 ```
 
-Add the argument `show.title = TRUE` to access the article titles. Add the 
-argument `show.comment = TRUE` to activate the extraction-related comments 
-accompanying the articles. The default for both arguments is `FALSE` (do not 
-report).
+You can access the article titles by adding the argument `show.title = TRUE`. 
+Then the column `Title` will appear after `Journal.Name`. Add the argument 
+`show.comment = TRUE` to activate the extraction-related comments 
+accompanying the articles. The column `Comment` will appear after `Source.ToC`. 
+The default for both arguments is `FALSE` (do not report).
 
-Now, let us access the systematic reviews with PMID numbers 16951908 and 17932160:
+### Access the index of specific datasets
+
+Now, let us access the systematic reviews with PMID numbers 16951908 and 
+17932160 (again, using the default arguments):
 
 ``` r
 get.dataset.index(pmid = c(16951908, 17932160))
@@ -132,10 +136,10 @@ get.dataset(pmid = 16951908)
 #> # ℹ 15 more rows
 #> # ℹ Use `print(n = ...)` to see more rows
 ``` 
-Adding the argument `show.index = TRUE` returns an _additional_ dataframe, 
-`$Characteristics_index` (following the dataset, which is skipped in the example 
-below) with the abbreviation (left column) and full name (right column) of each 
-characteristic:
+Adding the argument `show.index = TRUE` returns an _additional_ data-frame 
+(following the dataset, which is skipped in the example 
+below) that presents the abbreviation (left column) and full name (right column) 
+of each characteristic:
 
 ``` r
 get.dataset(pmid = 16951908, show.index = TRUE)
@@ -152,11 +156,11 @@ get.dataset(pmid = 16951908, show.index = TRUE)
 #> 7 quality      study quality  
 ``` 
 
-Lastly, adding the argument `show.type = TRUE` enhances the _additional_ dataframe, 
+Lastly, adding the argument `show.type = TRUE` enhances the _additional_ data-frame, 
 `$Characteristics_index`, with another two columns appearing on the right; the 
-`Characteristic.type` (clinical, demographic, methodological) and 
-`Characteristic.subtype` (participant, treatment, outcome, age, sex, ethnicity, 
-study design, study setting, risk of bias, withdrawals) for each characteristic:
+`Characteristic.type` (Clinical, Demographic, Methodological) and 
+`Characteristic.subtype` (Participant, Intervention, Outcome, Age, Sex, Ethnicity, 
+Study design, Study setting, Risk of bias, Withdrawals) for each characteristic:
 
 ``` r
 get.dataset(pmid = 16951908, show.index = TRUE, show.type = TRUE)
@@ -172,7 +176,7 @@ $Characteristics_index
 #> 6 duration     trial duration in months                Methodological      Study design          
 #> 7 quality      study quality                           Methodological      Risk of bias          
 ``` 
-The default for both arguments is `FALSE` (do not report).
+The default for both arguments is `FALSE` (do not report the data-frame `$Characteristics_index`).
 
 That's it for the moment! 😎 ☕
 
