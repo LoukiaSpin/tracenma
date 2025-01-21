@@ -1,8 +1,8 @@
 Type: Package
 Package: tracenma
 Title: Database for Developing Transitivity Methodology in Network Meta-Analysis
-Version: 0.1.0
-Date: 2024-03-27
+Version: 0.1.1
+Date: 2025-01-21
 Authors@R: c(
     person("Loukia", "Spineli", email = "Spineli.Loukia@mh-hannover.de", 
     role = c("aut", "cre"))
@@ -20,7 +20,7 @@ Depends:
     R (>= 4.0.0)
 Suggests: 
     knitr,
-    netmeta,
+    meta,
     nmadb,
     rmarkdown
 VignetteBuilder: 
@@ -29,4 +29,4 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2

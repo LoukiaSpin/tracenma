@@ -32,12 +32,13 @@
 #' The R package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was
 #' used to retrieve the corresponding dataset. Specifically, the function
 #' \code{\link[nmadb:readByID]{readByID}} was employed to download the dataset
-#' in the long format. Then, the function
-#' \code{\link[netmeta:pairwise]{pairwise}} of the R package
+#' in the long format. Then, the function \code{pairwise} of the R package
 #' \href{https://CRAN.R-project.org/package=netmeta}{netmeta} was implemented
 #' to convert the dataset into wide format with each row repeated as many
 #' times as the number of possible comparisons made in the corresponding
-#' study. The study names (or references) and treatment comparisons, as
+#' study (note, the function \code{\link[meta:pairwise]{pairwise}} is now
+#' part of R package \href{https://CRAN.R-project.org/package=meta}{meta}).
+#' The study names (or references) and treatment comparisons, as
 #' returned by \code{\link[nmadb:readByID]{readByID}}, were used to locate the
 #' studies in the corresponding report of the systematic review (and Appendix,
 #' if available) and extract the characteristics available in the relevant
@@ -48,7 +49,7 @@
 #'
 #' @author {Loukia M. Spineli}
 #'
-#' @seealso \code{\link[netmeta:pairwise]{pairwise}},
+#' @seealso \code{\link[meta:pairwise]{pairwise}},
 #'   \code{\link[nmadb:readByID]{readByID}}
 #'
 #'
