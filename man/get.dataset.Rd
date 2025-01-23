@@ -42,7 +42,7 @@ The R package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was
 used to retrieve the corresponding dataset. Specifically, the function
 \code{\link[nmadb:readByID]{readByID}} was employed to download the dataset
 in the long format. Then, the function \code{pairwise} of the R package
-\href{https://CRAN.R-project.org/package=netmeta}{netmeta} was implemented
+\href{https://CRAN.R-project.org/package=meta}{meta} was implemented
 to convert the dataset into wide format with each row repeated as many
 times as the number of possible comparisons made in the corresponding
 study (note, the function \code{\link[meta:pairwise]{pairwise}} is now
