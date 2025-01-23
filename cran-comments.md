@@ -1,3 +1,23 @@
+# Submission, version 0.1.1 (23/01/2025)
+* **R version 4.4.2 (2024-10-31 ucrt)**
+
+Status: OK
+
+* **R Under development (unstable) (2025-01-22 r87618 ucrt)**
+
+Status: OK
+
+* **R version 4.3.3 (2024-02-29 ucrt)**
+
+Status: OK
+
+### R CMD check results (tracenma 0.1.1)
+Duration: 11.5s
+
+0 errors | 0 warnings | 0 notes
+
+R CMD check succeeded
+
 # Resubmission, version 0.1.0 (29/03/2024)
 This is a re-submission with the following corrections, as requested:
 
