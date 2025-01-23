@@ -2,7 +2,7 @@ Type: Package
 Package: tracenma
 Title: Database for Developing Transitivity Methodology in Network Meta-Analysis
 Version: 0.1.1
-Date: 2025-01-21
+Date: 2025-01-23
 Authors@R: c(
     person("Loukia", "Spineli", email = "Spineli.Loukia@mh-hannover.de", 
     role = c("aut", "cre"))
