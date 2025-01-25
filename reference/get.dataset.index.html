@@ -79,8 +79,7 @@ to extraction notes about the selected systematic review(s). The default is
 data-frame (when <code>pmid</code> is a vector) with the following
 characteristics (column names):</p>
 <dl><dt>nmadb.ID</dt>
-<dd><p>The ID number as provided in the R package
-  <a href="https://CRAN.R-project.org/package=nmadb" class="external-link">nmadb</a>.</p></dd>
+<dd><p>The ID number as provided in the archived R package nmadb.</p></dd>
 
 <dt>PMID</dt>
 <dd><p>The PMID number.</p></dd>
@@ -127,27 +126,16 @@ characteristics (column names):</p>
     <p>When <code>year</code> is specified, the argument <code>pmid</code> should be NULL.
 Then, <code>get.dataset.index</code> returns all systematic reviews found in the
 database under this year.</p>
-<p>Except for <strong>PMID</strong>, <strong>Includes.ToC.where</strong>, and
-<strong>Source.ToC</strong>, all other characteristics were retrieved from the R
-package <a href="https://CRAN.R-project.org/package=nmadb" class="external-link">nmadb</a> using the
-function <code><a href="https://rdrr.io/pkg/nmadb/man/getNMADB.html" class="external-link">getNMADB</a></code> and subsetting to those
-systematic reviews with available data
-(i.e., <code>Data.available == "True"</code> when using the function
-<code><a href="https://rdrr.io/pkg/nmadb/man/getNMADB.html" class="external-link">getNMADB</a></code>). The database was reduced further
-during extraction, for instance, due to the reporting issues and data
-unavailability of the systematic review relating to the extraction
-process.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-    <p>Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JP. Predicting the extent
+    <p>Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
+R package version 1.2.0. 2019. &lt;https://CRAN.R-project.org/package=nmadb&gt;
+(archived).</p>
+<p>Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JP. Predicting the extent
 of heterogeneity in meta-analysis, using empirical data from the Cochrane
 Database of Systematic Reviews.
 <em>Int J Epidemiol</em> 2012;<b>41</b>(3):818–27. doi: 10.1093/ije/dys041.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="https://rdrr.io/pkg/nmadb/man/getNMADB.html" class="external-link">getNMADB</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>

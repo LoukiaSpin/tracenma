@@ -88,29 +88,11 @@ setting, Withdrawals) of the characteristics. The default is <code>FALSE</code>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The selected dataset refers to a connected network for a specific outcome
-studied in the corresponding systematic review.
-The R package <a href="https://CRAN.R-project.org/package=nmadb" class="external-link">nmadb</a> was
-used to retrieve the corresponding dataset. Specifically, the function
-<code><a href="https://rdrr.io/pkg/nmadb/man/readByID.html" class="external-link">readByID</a></code> was employed to download the dataset
-in the long format. Then, the function <code>pairwise</code> of the R package
-<a href="https://CRAN.R-project.org/package=meta" class="external-link">meta</a> was implemented
-to convert the dataset into wide format with each row repeated as many
-times as the number of possible comparisons made in the corresponding
-study (note, the function <code><a href="https://rdrr.io/pkg/meta/man/pairwise.html" class="external-link">pairwise</a></code> is now
-part of R package <a href="https://CRAN.R-project.org/package=meta" class="external-link">meta</a>).
-The study names (or references) and treatment comparisons, as
-returned by <code><a href="https://rdrr.io/pkg/nmadb/man/readByID.html" class="external-link">readByID</a></code>, were used to locate the
-studies in the corresponding report of the systematic review (and Appendix,
-if available) and extract the characteristics available in the relevant
-table(s). Each characteristic occupies one column in the dataset.
+studied in the corresponding systematic review. Each characteristic occupies
+one column in the dataset.
 Characteristics pertaining to intervention features occupied one column for
 the experimental and another for the control treatment in the corresponding
 comparison.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="https://rdrr.io/pkg/meta/man/pairwise.html" class="external-link">pairwise</a></code>,
-  <code><a href="https://rdrr.io/pkg/nmadb/man/readByID.html" class="external-link">readByID</a></code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
