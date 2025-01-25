@@ -9,6 +9,10 @@ A data-frame with 217 rows and 10 columns referring to the analysed
 systematic reviews with NMA and their characteristics, respectively.
 }
 \source{
+Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
+R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>
+(archived).
+
 Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JP. Predicting the extent
 of heterogeneity in meta-analysis, using empirical data from the Cochrane
 Database of Systematic Reviews.
