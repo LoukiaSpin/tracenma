@@ -19,8 +19,6 @@ BugReports: https://github.com/LoukiaSpin/tracenma/issues
 Depends: 
     R (>= 4.0.0)
 Suggests: 
-    meta,
-    nmadb,
     rmarkdown
 Config/testthat/edition: 3
 Encoding: UTF-8

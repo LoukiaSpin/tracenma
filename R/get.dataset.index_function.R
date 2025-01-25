@@ -20,8 +20,7 @@
 #' \code{get.dataset.index} returns a vector (when \code{pmid} is scalar) or a
 #' data-frame (when \code{pmid} is a vector) with the following
 #' characteristics (column names):
-#' \item{nmadb.ID}{The ID number as provided in the R package
-#'   \href{https://CRAN.R-project.org/package=nmadb}{nmadb}.}
+#' \item{nmadb.ID}{The ID number as provided in the archived R package nmadb.}
 #' \item{PMID}{The PMID number.}
 #' \item{First.Author}{The name of the first author.}
 #' \item{Year}{The year of publication.}
@@ -47,22 +46,13 @@
 #' Then, \code{get.dataset.index} returns all systematic reviews found in the
 #' database under this year.
 #'
-#' Except for \strong{PMID}, \strong{Includes.ToC.where}, and
-#' \strong{Source.ToC}, all other characteristics were retrieved from the R
-#' package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} using the
-#' function \code{\link[nmadb:getNMADB]{getNMADB}} and subsetting to those
-#' systematic reviews with available data
-#' (i.e., \code{Data.available == "True"} when using the function
-#' \code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
-#' during extraction, for instance, due to the reporting issues and data
-#' unavailability of the systematic review relating to the extraction
-#' process.
-#'
 #' @author {Loukia M. Spineli}
 #'
-#' @seealso \code{\link[nmadb:getNMADB]{getNMADB}}
-#'
 #' @references
+#' Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
+#' R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>
+#' (archived).
+#'
 #' Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JP. Predicting the extent
 #' of heterogeneity in meta-analysis, using empirical data from the Cochrane
 #' Database of Systematic Reviews.

@@ -37,21 +37,8 @@ from the selected systematic review of the database.
 }
 \details{
 The selected dataset refers to a connected network for a specific outcome
-studied in the corresponding systematic review.
-The R package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} was
-used to retrieve the corresponding dataset. Specifically, the function
-\code{\link[nmadb:readByID]{readByID}} was employed to download the dataset
-in the long format. Then, the function \code{pairwise} of the R package
-\href{https://CRAN.R-project.org/package=meta}{meta} was implemented
-to convert the dataset into wide format with each row repeated as many
-times as the number of possible comparisons made in the corresponding
-study (note, the function \code{\link[meta:pairwise]{pairwise}} is now
-part of R package \href{https://CRAN.R-project.org/package=meta}{meta}).
-The study names (or references) and treatment comparisons, as
-returned by \code{\link[nmadb:readByID]{readByID}}, were used to locate the
-studies in the corresponding report of the systematic review (and Appendix,
-if available) and extract the characteristics available in the relevant
-table(s). Each characteristic occupies one column in the dataset.
+studied in the corresponding systematic review. Each characteristic occupies
+one column in the dataset.
 Characteristics pertaining to intervention features occupied one column for
 the experimental and another for the control treatment in the corresponding
 comparison.
@@ -59,10 +46,6 @@ comparison.
 \examples{
 get.dataset(pmid = 25626481)
 
-}
-\seealso{
-\code{\link[meta:pairwise]{pairwise}},
-  \code{\link[nmadb:readByID]{readByID}}
 }
 \author{
 {Loukia M. Spineli}

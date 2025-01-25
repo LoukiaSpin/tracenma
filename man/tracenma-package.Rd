@@ -7,21 +7,20 @@
 \description{
 A database with extracted study-level aggregate characteristics (that may
 act as effect modifiers) from 217 systematic reviews with network
-meta-analysis and a set of functions to facilitate access. The database is
-aimed at methodology development and appraisal to assess transitivity
-assumption quantitatively.
+meta-analysis and a set of functions to facilitate access.
+The database is aimed at methodology development and appraisal to assess
+transitivity assumption quantitatively.
 }
 \details{
 R-package \bold{tracenma} is built upon the R-package
-\href{https://CRAN.R-project.org/package=nmadb}{nmadb} (version 1.2.0) by
-using the provided database to define the set of connected networks and
-extract available study-level aggregate clinical and methodological
-characteristics (that may act as effect modifiers) from the corresponding
-systematic reviews. The database of \bold{tracenma} currently includes a
-subset of the systematic reviews available in
-\href{https://CRAN.R-project.org/package=nmadb}{nmadb}; the included
-systematic reviews were published between 2004 and 2015 and had available
-data characteristics for extraction.
+"nmadb: Network Meta-Analysis Database API" (archived) by using the provided
+database to define the set of connected networks and extract available
+study-level aggregate clinical and methodological characteristics (that may
+act as effect modifiers) from the corresponding systematic reviews. The
+database of \bold{tracenma} currently includes a subset of the systematic
+reviews available in archived nmadb R package; the included systematic
+reviews were published between 2004 and 2015 and had available data
+characteristics for extraction.
 
 \bold{tracenma} comprises functions to access the catalogue with the
 available systematic reviews with network meta-analysis and datasets with
@@ -59,7 +58,8 @@ GPL-3.0 License.
 }
 \references{
 Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
-R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>.
+R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>
+(archived).
 
 Wan X, Wang W, Liu J, Tong T. Estimating the sample mean and standard
 deviation from the sample size, median, range and/or interquartile range.

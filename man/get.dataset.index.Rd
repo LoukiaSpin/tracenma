@@ -25,8 +25,7 @@ to extraction notes about the selected systematic review(s). The default is
 \code{get.dataset.index} returns a vector (when \code{pmid} is scalar) or a
 data-frame (when \code{pmid} is a vector) with the following
 characteristics (column names):
-\item{nmadb.ID}{The ID number as provided in the R package
-  \href{https://CRAN.R-project.org/package=nmadb}{nmadb}.}
+\item{nmadb.ID}{The ID number as provided in the archived R package nmadb.}
 \item{PMID}{The PMID number.}
 \item{First.Author}{The name of the first author.}
 \item{Year}{The year of publication.}
@@ -56,17 +55,6 @@ publication.
 When \code{year} is specified, the argument \code{pmid} should be NULL.
 Then, \code{get.dataset.index} returns all systematic reviews found in the
 database under this year.
-
-Except for \strong{PMID}, \strong{Includes.ToC.where}, and
-\strong{Source.ToC}, all other characteristics were retrieved from the R
-package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} using the
-function \code{\link[nmadb:getNMADB]{getNMADB}} and subsetting to those
-systematic reviews with available data
-(i.e., \code{Data.available == "True"} when using the function
-\code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
-during extraction, for instance, due to the reporting issues and data
-unavailability of the systematic review relating to the extraction
-process.
 }
 \examples{
 # For one systematic review with PMID number 25626481.
@@ -81,13 +69,14 @@ get.dataset.index(pmid = NULL, year = 2010)
 
 }
 \references{
+Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
+R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>
+(archived).
+
 Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JP. Predicting the extent
 of heterogeneity in meta-analysis, using empirical data from the Cochrane
 Database of Systematic Reviews.
 \emph{Int J Epidemiol} 2012;\bold{41}(3):818--27. doi: 10.1093/ije/dys041.
-}
-\seealso{
-\code{\link[nmadb:getNMADB]{getNMADB}}
 }
 \author{
 {Loukia M. Spineli}

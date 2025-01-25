@@ -2,10 +2,8 @@
 #'
 #' @description A database with 217 systematic reviews with network
 #' meta-analysis (NMA) published from 2004 to April 14, 2015. The collected
-#' systematic reviews were retrieved from the R package
-#' \href{https://CRAN.R-project.org/package=nmadb}{nmadb} and pertain to
-#' those with available data in the R package
-#' \href{https://CRAN.R-project.org/package=nmadb}{nmadb}.
+#' systematic reviews were retrieved from the archived R package nmadb and
+#' pertain to those with available data in that package.
 #'
 #' @format
 #' A data-frame with 217 rows and 10 columns referring to the analysed
@@ -14,8 +12,8 @@
 #' @details
 #' The characteristics of the systematic reviews comprise:
 #' \tabular{ll}{
-#' \strong{nmadb.ID} \tab The ID number as provided in the R package
-#' \href{https://CRAN.R-project.org/package=nmadb}{nmadb}.\cr
+#' \strong{nmadb.ID} \tab The ID number as provided in the archived R package
+#' nmadb.\cr
 #' \tab \cr
 #' \strong{PMID} \tab The PMID number.\cr
 #' \tab \cr
@@ -49,22 +47,20 @@
 #' }
 #'
 #' Except for \strong{PMID}, \strong{Includes.ToC.where}, \strong{Source.ToC},
-#' and \strong{Comment}, all other characteristics were retrieved from the R
-#' package \href{https://CRAN.R-project.org/package=nmadb}{nmadb} using the
-#' function \code{\link[nmadb:getNMADB]{getNMADB}} and subsetting to those
-#' systematic reviews with available data
-#' (i.e., \code{Data.available == "True"} when using the function
-#' \code{\link[nmadb:getNMADB]{getNMADB}}). The database was reduced further
-#' during extraction, for instance, due to the limited reporting quality and
-#' data of the systematic review relating to the extraction process.
-#'
-#' @seealso \code{\link[nmadb:getNMADB]{getNMADB}}
+#' and \strong{Comment}, all other characteristics were retrieved from the
+#' archived R package nmadb. The database was reduced further during extraction,
+#' for instance, due to the limited reporting quality and data of the systematic
+#' review relating to the extraction process.
 #'
 #' @docType data
 #' @keywords dataset
 #' @name index
 #' @usage data(index)
 #' @source
+#' Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
+#' R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>
+#' (archived).
+#'
 #' Turner RM, Davey J, Clarke MJ, Thompson SG, Higgins JP. Predicting the extent
 #' of heterogeneity in meta-analysis, using empirical data from the Cochrane
 #' Database of Systematic Reviews.

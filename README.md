@@ -22,11 +22,11 @@ systematic reviews with network meta-analysis published from 2004 to 2015.
 systematic reviews and the datasets with the extracted characteristics, 
 comprising the database.
 
-The package is built upon the R package 
+The package is built upon the archived R package 
 [nmadb](https://CRAN.R-project.org/package=nmadb) (version 1.2.0) to define the 
 eligible connected networks to extract the available characteristics from the 
 corresponding systematic reviews. Currently, `tracenma` includes a subset of the 
-systematic reviews available in 
+systematic reviews available in the archived 
 [nmadb](https://CRAN.R-project.org/package=nmadb).
 
 👉 The `tracenma` R package should **only** be used to develop and appraise the 
