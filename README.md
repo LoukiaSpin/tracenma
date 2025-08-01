@@ -13,6 +13,10 @@ Official Git repository of `tracenma` R package
 
 The [website](https://loukiaspin.github.io/tracenma/) of `tracenma` currently includes a structured reference list to facilitate access to the documentation of the functions available in the package.
 
+## Publication
+
+Spineli LM, García-Sierra AM, Yepes-Nuñez JJ. A database to initiate methodological advances in the evaluation of transitivity assumption in network meta-analysis: qualitative features and limitations of the tracenma R package. BMC Med Res Methodol. 2025;25(1):183. [doi: 10.1186/s12874-025-02634-x](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-025-02634-x).
+
 ## Description 
 
 The `tracenma` R package contains a database with extracted aggregate 
