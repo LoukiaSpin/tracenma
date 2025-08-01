@@ -46,6 +46,8 @@
 #' characteristics. Therefore, the accuracy of the extracted data may have
 #' been compromised to some extent.
 #'
+#' The characteristics of the datasets are summarised in Spineli et al., (2025).
+#'
 #' Type \code{citation("tracenma")} on how to cite \bold{tracenma}.
 #'
 #' To report possible bugs and errors, send an email to Loukia Spineli
@@ -61,6 +63,12 @@
 #' Papakonstantinou T. nmadb: Network Meta-Analysis Database API.
 #' R package version 1.2.0. 2019. <https://CRAN.R-project.org/package=nmadb>
 #' (archived).
+#'
+#' Spineli LM, García-Sierra AM, Yepes-Nuñez JJ. A database to initiate
+#' methodological advances in the evaluation of transitivity assumption in
+#' network meta-analysis: qualitative features and limitations of the tracenma
+#' R package. \emph{BMC Med Res Methodol} 2025;\bold{25}(1):183.
+#' doi: 10.1186/s12874-025-02634-x.
 #'
 #' Wan X, Wang W, Liu J, Tong T. Estimating the sample mean and standard
 #' deviation from the sample size, median, range and/or interquartile range.
